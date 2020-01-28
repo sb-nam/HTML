@@ -134,7 +134,7 @@
 
 
 ```
-## <thead>,<tbody>,<tfoot> 태그- 표 구조 정의하기
+## thead,tbody,tfoot 태그- 표 구조 정의하기
 ```html
 <!DOCTYPE html>
 <html>
@@ -192,6 +192,6 @@
 
 ```  
 
-## <col>,<colgroup> 태그 - 여러 열 묶어 스타일 지정하기
+## col,colgroup 태그 - 여러 열 묶어 스타일 지정하기
 ```html
 ```
