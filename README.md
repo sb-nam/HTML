@@ -29,3 +29,30 @@
   </body>
 </html>
 ```
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul> <!--  순서 없는 목록   -->
+      <li>1일차
+        <ol type = "a" reversed> <!-- 순서 있는 목록 -->
+          <li>해녀박물관</li>
+          <li>낚시체험</li>
+        </ol>
+       </li>
+      <li>2일차
+        <ol type="a" start="3">
+          <li>용눈이오름</li>
+          <li>만장굴</li>
+          <li>카약체험</li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
+```
