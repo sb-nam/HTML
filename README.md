@@ -416,3 +416,27 @@ text ) <input type="text" [속성="속성 값"]
   </body>
 </html>
 ```
+## number 타입
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <label class="reg" for="member">참여인원<small>(최대10명)</small></label>
+        <input type="number" id="member" value="1" min="0" max="10" step="1">
+      </li>
+      <li>
+        <label class="reg" for="stuffs">지원물품 <small>(1인당 5)</small></label></li>
+        <input type="number" id="stuffs" value="1" min="0" max="50" step="5">
+      <li>
+        <label class="reg" for="satis">희망단계 <small>(하,중,상)</small></label></li>
+        <input type="range" id="satis" value="1" min="1" max="3">
+    </ul>
+  </body>
+</html>
+```
