@@ -282,3 +282,31 @@
   </body>
 </html>
 ```
+## 폼 요소에 라벨 붙이기
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <h3>수강 분야(다수 선택 가능)</h3>
+      <ul>
+        <li><input type="checkbox" value="grm">문법</li>
+        <li><input type="checkbox" value="wr">작문</li>
+        <li><input type="checkbox" value="rd">독해</li>
+      </ul>
+
+      <h3>수강 분야(1과목만 선택 가능)</h3>
+      <ul>
+        <li><label><input type="radio" name="subject" value="eng">영어회화</label></li>
+        <li><label><input type="radio" name="subject" value="ch">중국어 회화</label></li>
+        <li><label><input type="radio" name="subject" value="jp">일어회화</label></li>
+      </ul>
+    </form>
+
+  </body>
+</html>
+```
