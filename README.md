@@ -192,6 +192,62 @@
 
 ```  
 
-## col,colgroup 태그 - 여러 열 묶어 스타일 지정하기
+## 링크 만들기
 ```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      ul{list-style-type: none;} //동글뱅이 표시 제거
+      a{text-decoration: none;} //밑줄 제거
+      a:hover{color: blue;} //마으스 커서시 반응
+    </style>
+  </head>
+  <body>
+    <ul>
+       li*3>a // li 가 3 개 만들어짐
+      <li><a href="a-1.html">첫번째 이동</a></li> <!-- a-1로 이동 하게 만듬 -->
+      <li><a href="a-2.html">두번째 이동</a></li> <!-- a-2로 이동 하게 만듬 -->
+      <li><a href="a-3.html">세번째 이동</a></li> <!-- a-3로 이동 하게 만듬 -->
+      <li><a href="https://www.naver.com/" target="_blank">네이버로 이동</a></li> //새창열림
+      <li><a href="https://www.daum.net/">다음으로 이동</a></li>
+      <li><a href="https://www.nate.com/">네이트로 이동</a></li>
+      <a href="https://www.naver.com/"><img src="images/Tulips.jpg" alt="툴립">누르면 네이버로</a>
+    </ul>
+    <iframe src="" width="" height=""></iframe>
+  </body>
+</html>
+
+```
+## 한문서 안에서 점프 하기
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>앵커 만들기</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <ul id="menu">
+      <li><a href="#content1">메뉴1</a></li>
+      <li><a href="#content2">메뉴2</a></li>
+      <li><a href="#content3">메뉴3</a></li>
+    </ul>
+
+    <h2 id="content1">내용1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    <a href="#menu">[메뉴로]</a>
+
+
+    <h2 id="content2">내용2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. .</p>
+    <p><a href="#menu">[메뉴로]</a></p>
+
+  </body>
+</html>
+
 ```
