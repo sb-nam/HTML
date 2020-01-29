@@ -386,3 +386,33 @@ text ) <input type="text" [속성="속성 값"]
 
   
 ```
+## 분화된 텍스트 필드
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <label for="user-name">이름</label>
+        <input type="text" id="user-name">
+      </li>
+      <li>
+        <label for="mail">메일주소</label>
+        <input type="email" id="mail">
+      </li>
+      <li>
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone">
+      </li>
+      <li>
+        <label for="homep">블로그/홈페이지</label>
+        <input type="url" id="homep">
+      </li>
+    </ul>
+  </body>
+</html>
+```
