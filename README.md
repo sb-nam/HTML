@@ -251,3 +251,34 @@
 </html>
 
 ```
+## 폼태그 만들기
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      li{margin-top: 20px;}
+    </style>
+  </head>
+  <body>
+    <form method="post">
+      <input type="text" title="검색">
+      <input type="submit" title="검색">
+
+      <ul style="list-style:none;">
+        <li>
+          <label for="id">아이디</label>
+          <input type="text" id="id">
+        </li>
+        <li>
+          <label for="pw">비밀번호</label>
+          <input type="password" id="pw">
+        </li>
+         <li> <button type="button" name="button">로그인</button> </li>
+      </ul>
+    </form>
+  </body>
+</html>
+```
