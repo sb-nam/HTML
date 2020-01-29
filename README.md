@@ -440,3 +440,30 @@ text ) <input type="text" [속성="속성 값"]
   </body>
 </html>
 ```
+## 라디오 버튼과 체크박스 삽입 하기
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>신청 과목</legend>
+      <p>이 달에 신청할 과목을 선택하세요</p>
+      <label><input type="radio" name="subject" value="speaking">회화</label>
+      <label><input type="radio" name="subject" value="grammar">문법</label>
+      <label><input type="radio" name="subject" value="writing">작문</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>메일링</legend>
+      <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요(복수선택 가능)</p>
+      <label><input type="checkbox" name="mailing1" value="news">해외 단신</label>
+      <label><input type="checkbox" name="mailing1" value="dialog">5분 회화</label>
+      <label><input type="checkbox" name="mailing1" value="pops">모닝팝스</label>
+    </fieldset>
+  </body>
+</html>
+```
