@@ -357,4 +357,32 @@ radio
 submit
 reset
 button
+
+hidden ) <intput type="hidden" name="이름" value ="서버로 넘길 값">
+password ) <input type="password" [속성 ="속성 값"]  
+text ) <input type="text" [속성="속성 값"]
+-name : 텍스트 필드를 구별할 수 있는 이름
+-size : 텍스트 필드의 최대 길이 지정, 지정길이를 초과시 화면에 표시되지 않음
+-value : 텍스트 필드가 화면에 표시될때 필드 부분에 표시될 내용
+           이 속성 미 사용시 빈 텍스트 필드 표시됨.
+-maxlength  : 텍스트 필드에 입력할 수 있는 최대 문자 개수 지정.  
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <label>아이디: <input type="text" id="user_id" size="10"></label>
+        <label>비밀번호: <input type="password" id="user_pw" size="10"></label>
+        <input type="submit"  value="로그인">
+      </fieldset>
+    </form>
+  </body>
+</html>
+
+  
 ```
