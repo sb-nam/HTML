@@ -310,3 +310,51 @@
   </body>
 </html>
 ```
+## fieldset,legend 태그
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/design.css">
+    <!-- css라는 파일에 design.css 이름으로 파일저장. -->
+    // design.css 파일에서 접근
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>개인정보</legend>
+        <ul>
+          <li>
+            <label for="name">이름</label>
+            <input type="text" id="name">
+          </li>
+          <li>
+            <label for="mail">메일 주소</label>
+            <input type="text" id="mail">
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
+design.css에서 사용한 명령어.
+li{margin-top: 20px; }
+ul{list-style-type: none;}
+
+```
+
+## 주요 intput 태그
+```html
+hidden
+text
+tel
+password
+checkbox
+radio
+submit
+reset
+button
+```
