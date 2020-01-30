@@ -467,3 +467,65 @@ text ) <input type="text" [속성="속성 값"]
   </body>
 </html>
 ```
+## 날짜,시간,버튼 삽입 하기
+```html
+날짜
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <label><input type="date" id="start"></label>
+    <label><input type="date" id="end"></label>
+  </body>
+</html>
+------------------------------------
+시간
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>원하는 대관시간을 선택하세요.(오늘)</h3>
+    <label>시작 시간 <input type="time"  value="09:00" id="start"></label>
+    <label>종료 시간 <input type="time" value="18:00" id="end"></label>
+
+    <h3>대관시간을 선택하세요(다른날짜)</h3>
+    <label>시작 시간 <input type="datetime-local"  value="2020-01-30T09:00" id="start2"></label>
+    <label>종료 시간 <input type="datetime-local" value="2020-01-30T18:00" id="end2"></label>
+  </body>
+</html>
+-------------------------------------
+SUBMIT
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="index.html" method="post">
+      <label>메일 주소<input type="text"></label>
+      <input type="submit" value="제출">
+      <input type="reset" value="다시입력">
+    </form>
+  </body>
+</html>
+-------------------------------------
+버튼
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="button" value="새 탭 열기" onclick="window.open()">
+  </body>
+</html>
+```
+
