@@ -528,4 +528,92 @@ SUBMIT
   </body>
 </html>
 ```
+## 드롭다운 태그 만들기
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <label class="reg" for="class">학과</label>
+    <select size="5" id="class" multiple>
+      <option value="archi">건축공학과</option>
+      <option value="mechanic">기계공학과</option>
+      <option value="indust">산업공학과</option>
+      <option value="elec">전기전자공학과</option>
+      <option value="computer">컴퓨터공학과</option>
+      <option value="chemical">화학공학과</option>
+    </select>
+  </body>
+</html>
+```
+## 태그 - 옵션끼리 묶기
+```html
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <label class="reg" for="class">학과</label>
+  <select id="class">
+    <optgroup label="공과대학">
+      <option value="archi">건축공학과</option>
+      <option value="mechanic">기계공학과</option>
+      <option value="indust">산업공학과</option>
+      <option value="elec">전기전자공학과</option>
+      <option value="computer">컴퓨터공학과</option>
+      <option value="chemical">화학공학과</option>
+    </optgroup>
+    <optgroup label="인문대학">
+      <option value="history">사학과</option>
+      <option value="lang">어문학부</option>
+      <option value="philo">철학</option>
+    </optgroup>
+  </select>
+</body>
+
+</html>
+
+```
+## 데이터 목록 만들기
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="interest" list="choices">
+    <datalist id="choices">
+      <option value="grammar" label="문법"></option>
+      <option value="voca" label="어휘"></option>
+      <option value="speaking" label="회화"></option>
+      <option value="listening" label="리스닝"></option>
+      <option value="news" label="뉴스청취"></option>
+    </datalist>
+  </body>
+</html>
+```
+
+## 여러줄을 입력하는 텍스트 영역 만들기
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <textarea name="intro" rows="5" cols="60">
+      열심히 사는 사람들의 손을 잡아주는곳
+    </textarea>
+  </body>
+</html>
+```
