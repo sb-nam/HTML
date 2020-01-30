@@ -61,6 +61,27 @@
   </body>
 </html>
 ```
+## dl,dt,dd
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>웹 과정을 통해 배우는 것</h2>
+    <dl>
+      <dt>HTML,CSS</dt>
+      <dd>HTML:웹문서의 내용을 구성한다.</dd>
+      <dd>CSS:웹문서의 스타일을 구성한다.</dd>
+      <dt>JavaScript</dt>
+      <dd>역동적인 웹을 만들 수 있다.</dd>
+      <dd>프로그래밍 언어를 알아야 한다.</dd>
+    </dl>
+  </body>
+</html>
+```
 ## 표를 만드는 태그
 ```html
 <!DOCTYPE html>
