@@ -664,3 +664,21 @@ SUBMIT
 3.클래스 스타일
 4.태그 스타일
 *동일 순서적용시 마지막에 적용된 스타일을 따름.
+
+## CSS linear
+```html
+@charset "EUC-KR";
+.grad{
+	background: blue;
+	background: -webkit-linear-gradient(left top,blue,white);
+	background: -moz-linear-gradient(right top,blue,white);
+	background: -o-linear-gradient(right top,blue,white);
+	background: linear-gradient(to left bottom,#ff0000,#ffffff);
+}
+
+div{
+	width: 500px;
+	height: 300px;
+	border-radius: 20px; 
+}
+```
