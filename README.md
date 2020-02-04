@@ -825,3 +825,174 @@ nav ul li {
 
 </html>
 ```
+## 테두리 스타일 지정하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+	width: 200px;
+	height: 100px;
+	display: inline-block;
+	margin: 15px;
+	border-width: 15px;  //테두리굵기;
+	border-color: rgb(000,153,204);
+}
+
+.box1 {
+	border-style: solid;
+}
+.box2 {
+	border-style: dotted;
+}
+.box3 {
+	border-style: dashed;
+}
+</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+</body>
+</html>
+```
+
+## 테두리 스타일 한꺼번에 지정하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+h1 {
+	padding-bottom: 5px;
+	border-bottom: 3px solid #ccc;
+}
+p{
+    padding: 10px;
+    border: 3px dotted black;
+}
+</style>
+</head>
+<body>
+	<h1>박스모델</h1>
+	<p>박스 모델은 실제 코넨츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의
+		테두리(border), 그리고 여러 박스 모델 간의 여백 인 마진(margin) 등의 요소로 구성되어 있습니다.</p>
+</body>
+</html>
+```
+
+## 테두리 모서리를 둥글게 처리하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.round{
+border: 2px solid red;
+border-radius: 20px;
+
+}
+#bg{
+background: url(../images/bg1.png) no-repeat;
+background-size: cover;
+}
+div{
+margin: 20px;
+display: inline-block;
+width: 300px;
+height: 300px;
+}
+</style>
+</head>
+<body>
+<div class="round"></div>
+<div class="round" id="bg"></div>
+</body>
+</html>
+```
+
+## 테두리에 그림자 효과 추가하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+	width: 200px;
+	height: 100px;
+	display: inline-block;
+	margin: 15px;
+	border: 2px solid;
+	border-radius: 20px;
+}
+
+.box1 {
+	box-shadow: 2px -2px 5px 0px black;
+}
+
+.box2 {
+	box-shadow: 5px 5px 15px 5px gray;
+}
+</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>
+```
+
+## 다양하게 마진 값 지정 하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+	width: 200px;
+	height: 100px;
+	background: #0094ff;
+}
+
+.box1 {
+	margin: 30px 50px 30px 50px;
+}
+
+.box2 {
+	margin: 40px 70px;
+}
+
+.box3 {
+	margin: 50px;
+}
+
+.box4 {
+	margin: 20px 5px 10px;
+}
+
+.box5 {
+	margin: 0px auto;
+}
+</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+    <div class="box5"></div>
+</body>
+</html>
+```
