@@ -996,3 +996,40 @@ div {
 </body>
 </html>
 ```
+## 다양하게 패딩값 지정하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+	width: 200px;
+	height: auto;
+	margin: 15px;
+	background: #0094ff;
+	display: inline-block;
+	color: white;
+}
+
+.box1 {
+	padding: 10px 30px 10px 30px;
+}
+
+.box2 {
+	padding: 30px 30px;
+}
+
+.box3 {
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+	<div class="box1">패딩(padding)이란 콘텐츠 영역과 테두리 사이의 여백을 말합니다.</div>
+	<div class="box2">패딩(padding)이란 콘텐츠 영역과 테두리 사이의 여백을 말합니다.</div>
+	<div class="box3">패딩(padding)이란 콘텐츠 영역과 테두리 사이의 여백을 말합니다.</div>
+</body>
+</html>
+```
