@@ -682,3 +682,146 @@ div{
 	border-radius: 20px; 
 }
 ```
+## 박스 모델의 너비와 높이 지정
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.box1 {
+	width: 200px;
+	height: 100px;
+	background: #ff6a00;
+}
+
+.box2 {
+	width: 50%;
+	height: 100px;
+	background: #0094ff;
+}
+
+div {
+	margin: 10px;
+}
+
+</style>
+</head>
+<body>
+	<div class="box1">
+	
+	</div>
+	<div class="box2"></div>
+</body>
+</html>
+```
+## 이미지를 인라인 혹은 블록 레벨로 배치하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style media="screen">
+    #block img{
+        display: block;
+        margin: 10px;
+}
+
+</style>
+</head>
+<body>
+	<div id="inline">
+		<img alt="그림1" src="images/bg1.png">
+	    <img alt="그림1" src="images/bg2.jpg">
+	    <img alt="그림1" src="images/bg3.jpg">
+	</div>
+	<div id="block">
+		<img alt="그림1" src="images/bg1.png"> 
+		<img alt="그림1" src="images/bg2.jpg"> 
+		<img alt="그림1" src="images/bg3.jpg">
+	</div>
+</body>
+</html>
+```
+## 블록 레벨 요소를 인라인 레벨 요소로 변경하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+nav ul li {
+	display: inline;
+}
+</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">애완견 종류</a></li>
+			<li><a href="#">입양 하기</a></li>
+			<li><a href="#">건강 돌보기</a></li>
+			<li><a href="#">더불어 살기</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
+```
+## 블록 레벨 속성을 가지면서 인라인으로 배치
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Insert title here</title>
+  <style>
+    nav ul li {
+      display: inline-block;
+      
+    }
+
+    nav {
+      width: 100%;
+      height: 60px;
+      background-color: gray;
+    }
+
+
+    nav ul li {
+      display:inline-block;
+      
+    }
+
+    nav ul a {
+      display:inline-block;
+      text-decoration:none;
+      color: #fff;
+      padding:20px;
+
+    }
+
+    nav ul a:hover {
+      background-color: rgb(27, 162, 215);
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">애완견 종류</a></li>
+      <li><a href="#">입양 하기</a></li>
+      <li><a href="#">건강 돌보기</a></li>
+      <li><a href="#">더불어 살기</a></li>
+    </ul>
+    <h2>애완견 종류</h2>
+  </nav>
+</body>
+
+</html>
+```
