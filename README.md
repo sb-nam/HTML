@@ -1491,3 +1491,119 @@ div.box {
 </body>
 </html>
 ```
+## 표 테두리 통합하기 및 분리하기
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>표 스타일</title>
+<style>
+.table1 {
+	border: 1px solid black;
+	caption-side: top;
+	border-collapse: collapse; //안쪽 점선1개;
+	border-collapse: separate; //안쪽 점선2개;
+	border-spacing: 20px 10px;
+}
+
+.table1 td {
+	border: 1px dotted black;
+	padding: 10px;
+	text-align: center;
+}
+
+body {
+	font-family: "맑은 고딕", "고딕", "굴림";
+}
+</style>
+</head>
+<body>
+	<table class="table1">
+		<caption>프로축구 경기 일정</caption>
+		<tr>
+			<td>울산</td>
+			<td>울산 vs 인천</td>
+		</tr>
+		<tr>
+			<td>부산</td>
+			<td>부산 vs 대전</td>
+		</tr>
+		<tr>
+			<td>서울</td>
+			<td>서울 vs 강원</td>
+		</tr>
+	</table>
+</body>
+</html>
+```
+## 빈 셀 표시하기 감추기
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>표 스타일</title>
+<style>
+.schedule {	
+	border-collapse: separate; //안쪽 점선2개;
+	margin: 20px;
+}
+
+td {
+	border: 1px solid black;
+	padding: 10px;
+	text-align: center;
+}
+#tb1{
+empty-cells: show;
+}
+#tb2{
+empty-cells: hide;
+}
+
+body {
+	font-family: "맑은 고딕", "고딕", "굴림";
+}
+</style>
+</head>
+<body>
+	<table class="schedule" id="tb1">
+		<caption>프로축구 경기 일정</caption>
+		<tr>
+			<td>울산</td>
+			<td>울산 vs 인천</td>
+			<td>Tv중계</td>
+		</tr>
+		<tr>
+			<td>부산</td>
+			<td>부산 vs 대전</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>서울</td>
+			<td>서울 vs 강원</td>
+			<td></td>
+		</tr>
+	</table>
+	<table class="schedule" id="tb2">
+		<caption>프로축구 경기 일정</caption>
+		<tr>
+			<td>울산</td>
+			<td>울산 vs 인천</td>
+			<td>Tv중계</td>
+		</tr>
+		<tr>
+			<td>부산</td>
+			<td>부산 vs 대전</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>서울</td>
+			<td>서울 vs 강원</td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>
+```
