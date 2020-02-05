@@ -1033,3 +1033,36 @@ div {
 </body>
 </html>
 ```
+## 박스 모델의 너비 결정하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.box1 {
+	box-sizing: content-box; width : 300px;
+	height: 150px;
+	margin: 10px;
+	padding: 30px;
+	border: 2px solid red;
+	width: 300px;
+}
+
+.box2 {
+	box-sizing: border-box;
+	width: 300px;
+	height: 150px;
+	margin: 10px;
+	padding: 30px;
+	border: 2px solid red;
+}
+</style>
+</head>
+<body>
+	<div class="box1">box-sizing="content-box</div>
+	<div class="box2">box-sizing="border-box</div>
+</body>
+</html>
+```
