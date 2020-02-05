@@ -1066,3 +1066,428 @@ div {
 </body>
 </html>
 ```
+## 여러가지 박스를 가로로 배치하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.box1 {
+	padding: 20px;
+	margin-right: 10px;
+	background: #ffd800;
+	float: left;
+}
+
+.box2 {
+	padding: 20px;
+	margin-right: 10px;
+	background: #0094ff;
+	float: left;
+}
+
+.box3 {
+	padding: 20px;
+	background: #00ff21;
+	float: left;
+}
+
+.box4 {
+	padding: 20px;
+	border: 1px solid black;
+	float: right;
+	background: #ffffff;
+}
+</style>
+</head>
+<body>
+	<div class="box1">박스1</div>
+	<div class="box2">박스2</div>
+	<div class="box3">박스3</div>
+	<div class="box4">박스4</div>
+</body>
+</html>
+```
+
+## 2단 레이아웃 만들기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+	border: 1px solid #ccc;
+}
+
+#container {
+	width: 960px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+#header {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#contents {
+	width: 620px;
+	padding: 20px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+#sidebar {
+	width: 220px;
+	padding: 20px;
+	float: right;
+	margin-bottom: 20px;
+}
+
+#footer {
+	clear: both;
+	padding: 20px;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>사이트 제목</h1>
+		</div>
+
+		<div id="sidebar">
+			<h2>사이드바</h2>
+			<ul>
+				<li>일단 제 상황을 말하자면.. 일단 제 상황을 말하자면.. 일단 제 상황을 말하자면.. 일단 제 상황을 말하자면..
+				일단 제 상황을 말하자면.. 일단 제 상황을 말하자면..
+				</li>
+			</ul>
+		</div>
+		<div id="contents">
+			<h2>본문</h2>
+			<ul>
+				<li>잘털어 놓으셨어요. 마음에 힘든걸 담아두기만 하면 더 병이되더군요. 저는 그래서 마음이 엄청 힘들곤
+					했었답니다. 예전에는 우울했지만 지금은 그정도는 아니더라도 한번씩 그러신것이면 분명히 마음에 상처나 힘든점이 있고,
+					그것을 그저 인식하지 못하고 있는것 같습니다. 어쩌면 부모님을 걱정 시킬까 아니면 다른이유로 무의식적으로 누르고
+					있을수도 있고요. 일단 일기를 쓰든 한글과 컴퓨터에 쓰든 자신의 마음을 솔직하게 써보는것을 추천드릴게요. 마음을
+					정리하시고 정말 안되겠다면 부모님께도 말씀드리세요. 아니면 친구들한테도 정말 믿을수 있는 친구라면, 친구한테도
+					해보시고요. 무슨 마음의 상처인지는 모르지만 꼭 낫기를 기도드립니다.</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<h2>푸터</h2>
+			<ul>
+				<li>본 답변은 참고 용도로만 활용 가능하며 정확한 정보는 관련기관에서 확인해보시기 바랍니다. 위 답변은
+					답변작성자가 경험과 지식을 바탕으로 작성한 내용입니다. 포인트로 감사할 때 참고해주세요.</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+```
+
+## 3단 레이아웃
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+	border: 1px solid #ccc;
+}
+
+#container {
+	width: 960px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+#header {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#contents {
+	width: 420px;
+	padding: 20px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+#left-sidebar {
+	width: 180px;
+	padding: 20px;
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	background: #ccc;
+}
+
+#right-sidebar {
+	width: 180px;
+	padding: 20px;
+	float: right;
+	margin-bottom: 20px;
+	background: #ccc;
+}
+
+#footer {
+	clear: both;
+	padding: 20px;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>사이트 제목</h1>
+		</div>
+		
+		<div id="left-sidebar">
+			<h2>left 사이드바</h2>
+			<ul>
+				<li>일단 제 상황을 말하자면.일단 제 상황을 말하자면.. 일단 제 상황을 말하자면.. 일단 제 상황을
+					말하자면.. 일단 제 상황을 말하자면.. 일단 제 상황을 말하자면.. 일단 제 상황을 말하자면...</li>
+			</ul>
+		</div>
+		<div id="right-sidebar">
+			<h2>right 사이드바</h2>
+			<ul>
+				<li>일단 제 상황을 말하자면.일단 제 상황을 말하자면.. 일단 제 상황을 말하자면.. 일단 제 상황을
+					말하자면.. 일단 제 상황을 말하자면.. 일단 제 상황을 말하자면.. 일단 제 상황을 말하자면...</li>
+			</ul>
+		</div>
+		<div id="contents">
+			<h2>본문</h2>
+			<ul>
+				<li>잘털어 놓으셨어요. 마음에 힘든걸 담아두기만 하면 더 병이되더군요. 저는 그래서 마음이 엄청 힘들곤
+					했었답니다. 예전에는 우울했지만 지금은 그정도는 아니더라도 한번씩 그러신것이면 분명히 마음에 상처나 힘든점이 있고,
+					그것을 그저 인식하지 못하고 있는것 같습니다. 어쩌면 부모님을 걱정 시킬까 아니면 다른이유로 무의식적으로 누르고
+					있을수도 있고요. 일단 일기를 쓰든 한글과 컴퓨터에 쓰든 자신의 마음을 솔직하게 써보는것을 추천드릴게요. 마음을
+					정리하시고 정말 안되겠다면 부모님께도 말씀드리세요. 아니면 친구들한테도 정말 믿을수 있는 친구라면, 친구한테도
+					해보시고요. 무슨 마음의 상처인지는 모르지만 꼭 낫기를 기도드립니다.</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<h2>푸터</h2>
+			<ul>
+				<li>본 답변은 참고 용도로만 활용 가능하며 정확한 정보는 관련기관에서 확인해보시기 바랍니다. 위 답변은
+					답변작성자가 경험과 지식을 바탕으로 작성한 내용입니다. 포인트로 감사할 때 참고해주세요.</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+```
+## relative 값으로 요소 배치하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.box1 {
+	float: left;
+	width: 100px;
+	background: #ffd800;
+	margin-right: 10px;
+	padding: 20px;
+}
+
+.box2 {
+	position: relative;
+	left: -50px;
+	top: 30px;
+	width: 300px;
+	background: #0094ff;
+	float: left;
+	padding: 20px;
+}
+</style>
+</head>
+<body>
+	<div class="box1">박스1</div>
+	<div class="box2">박스2</div>
+</body>
+</html>
+```
+
+## absolute 값으로 요소 배치하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+#wrap {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border: 1px solid #ccc;
+}
+
+.box {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: #0094ff;
+}
+
+#crd1 {
+	top: 0;
+	left: 0;
+}
+
+#crd2 {
+	top: 0;
+	right: 0;
+}
+
+#crd3 {
+	bottom: 0;
+	left: 0;
+}
+
+#crd4 {
+	bottom: 0;
+	right: 0;
+}
+
+#crd5 {
+	top: 100px;
+	left: 100px;
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box" id="crd1"></div>
+		<div class="box" id="crd2"></div>
+		<div class="box" id="crd3"></div>
+		<div class="box" id="crd4"></div>
+		<div class="box" id="crd5"></div>
+	</div>
+</body>
+</html>
+```
+
+## fixed 값으로 요소 배치하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+#fx {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	width: 50px;
+	height: 50px;
+	background: #ff6a00;
+}
+
+#content {
+	width: 400px;
+}
+
+p {
+	line-height: 30px;
+}
+</style>
+
+</head>
+<body>
+	<div id="fx"></div>
+	<div id="content">
+		<p>fixed 값을 ...... 됩니다.</p>
+	</div>
+</body>
+</html>
+```
+## 특정 요소 화면에서 감추기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+img{
+margin: 10px;
+padding: 5px;
+border: 1px solid black;
+}
+.invisible{
+visibility: hidden;
+}
+</style>
+</head>
+<body>
+<img src="../images/bg1.png">
+<img src="../images/bg2.jpg" class="invisible">
+<img src="../images/bg3.jpg">
+</body>
+</html>
+```
+## 여러요소 쌓는 순서 조절하기
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div#wrapper {
+	position: relative;
+}
+
+#b1 {
+	z-index: 1;
+	background-color: red;
+	top: 0;
+	left: 0;
+}
+
+#b2 {
+	z-index: 3;
+	background-color: yellow;
+	top: 20px;
+	left: 70px;
+}
+
+#b3 {
+	z-index: 1;
+	background-color: blue;
+	top: 70px;
+	left: 20px;
+}
+
+div.box {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	font-size: 26px;
+}
+</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="box" id="b1">1</div>
+		<div class="box" id="b2">2</div>
+		<div class="box" id="b3">3</div>
+	</div>
+</body>
+</html>
+```
