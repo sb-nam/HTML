@@ -1654,42 +1654,86 @@ ex) * section ul : section 밑에 ul 모두 적용.
 </html>
 ```
 
-## 선택자
-```html
+## 속성 선택자
+``` html
+[속성 ~= 값] 선택자 = 여러 속성 값 중에 해당값이 포함 되어있는 요소를 찾아 스타일 적용.
+ex) [class ~="button"]
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>속성 선택자</title>
 <style media="screen">
 ul {
 	list-style: none;
 }
+
 li {
-	width: 120px;
-	display:inline;
+	display: inline;
 	float: left;
 	margin: 10px;
 }
+
 li a {
 	padding: 5px 20px;
 	font-size: 14px;
 	color: blue;
 	text-decoration: none;
 }
-a[href]{
-    background-color: yellow;
+
+.flat {
+	background: blue;
+	color: white;
+}
+
+[class~="button"] {
+	border: 2px solid black;
+	box-shadow: rgba(0, 0, 0, 0.4) 5px 5px;
 }
 </style>
 </head>
 <body>
 	<ul>
-		<li><a>메인 메뉴</a></li>
-		<li><a href="#">메뉴1</a></li>
-		<li><a href="#">메뉴2</a></li>
-		<li><a href="#">메뉴3</a></li>
-		<li><a href="#">메뉴4</a></li>
+		<li><a href="#">메뉴 1</a></li>
+		<li><a href="#">메뉴 2</a></li>
+		<li><a href="#" class="button">메뉴 3</a></li>
+		<li><a href="#" class="flat button">메뉴 4</a></li>
 	</ul>
+</body>
+</html>
+```
+
+## 속성 선택자
+
+```html
+
+[속성 |= 값]선택자 = 특정 값이 가진 요소를 찾아 스타일 적용.
+ex)  [title |="us]
+
+<!DOCTYPE html>
+<html>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style media="screen">
+a[title |="us"]{
+   background: url('../images/us.png') no-repeat left center;
+   padding: 5px 25px;
+}
+a[title |="jap"] {
+   background: url('../images/jp.png') no-repeat left center;
+   padding: 5px 25px;
+}
+
+</style>
+</head>
+<body>
+<ul>
+<li>외국어 서비스</li>
+<li><a href="#" title="us">영어</a></li>
+<li><a href="#" title="us-english">영어</a></li>
+<li><a href="#" title="japanese">일본어</a></li>
+</ul>
 </body>
 </html>
 ```
