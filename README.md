@@ -1607,3 +1607,89 @@ body {
 </body>
 </html>
 ```
+## 연결 선택자
+```html
+ex) * section ul : section 밑에 ul 모두 적용.
+    * section > ul : 자식중 바로 다음 ul만 적용.
+    * section + ul : 형제중 바로 다음 ul 만 적용.
+    * section ~ ul : 형제중 모든 ul 적용.
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+#container ul{
+  border: 1px dotted blue;
+}
+</style>
+</head>
+<body>
+	<section id="container">
+		<header>
+			<h1>예약 방법 및 요금</h1>
+		</header>
+		<p>요안도라에 예약 하려면??</p>
+		<ul>
+			<li>예약 방법
+				<ul>
+					<li>직접 통화</li>
+					<li>문자 남기기</li>
+				</ul>
+			</li>
+
+			<li>요금
+				<ul>
+					<li>1인 40,000원</li>
+					<li>2인 60,000원</li>
+					<li>3인 80,000원</li>
+					<li>4인 100,000원</li>
+				</ul>
+			</li>
+
+		</ul>
+	</section>
+</body>
+</html>
+```
+
+## 선택자
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style media="screen">
+ul {
+	list-style: none;
+}
+li {
+	width: 120px;
+	display:inline;
+	float: left;
+	margin: 10px;
+}
+li a {
+	padding: 5px 20px;
+	font-size: 14px;
+	color: blue;
+	text-decoration: none;
+}
+a[href]{
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a>메인 메뉴</a></li>
+		<li><a href="#">메뉴1</a></li>
+		<li><a href="#">메뉴2</a></li>
+		<li><a href="#">메뉴3</a></li>
+		<li><a href="#">메뉴4</a></li>
+	</ul>
+</body>
+</html>
+```
