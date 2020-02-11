@@ -1656,8 +1656,18 @@ ex) * section ul : section 밑에 ul 모두 적용.
 
 ## 속성 선택자
 ``` html
+[속성 = 값] 선택자 = 특정 값을 갖는 속성에 스타일 적용
+[속성 |= 값] 선택자 = 특정 값이 가진 요소를 찾아 스타일 적용.
 [속성 ~= 값] 선택자 = 여러 속성 값 중에 해당값이 포함 되어있는 요소를 찾아 스타일 적용.
-ex) [class ~="button"]
+[속성 ^= 값] 선택자 = 특정 값으로 시작하는 속성에 스타일 적용하기
+[속성 $= 값] 선택자 = 특정 값으로 끝나는 속성에 스타일 적용하기
+
+ex)  a[target ="_blank"]
+     [title |="us]
+     [class ~="button"]
+     a[title ^="eng"]
+     a[href $="html]
+
 
 <!DOCTYPE html>
 <html>
@@ -1708,9 +1718,6 @@ li a {
 
 ```html
 
-[속성 |= 값]선택자 = 특정 값이 가진 요소를 찾아 스타일 적용.
-ex)  [title |="us]
-
 <!DOCTYPE html>
 <html>
 <meta charset="EUC-KR">
@@ -1734,6 +1741,197 @@ a[title |="jap"] {
 <li><a href="#" title="us-english">영어</a></li>
 <li><a href="#" title="japanese">일본어</a></li>
 </ul>
+</body>
+</html>
+```
+## 가상클래스 선택자
+```html
+
+:link = 방문하지 않은 링크에 스타일 적용.
+:visited = 방문한 링크에 스타일 적용.
+:active = 웹 요소를 활성화 했을때 스타일 적용.
+:hover = 웹 요소에 마우스 커서를 올려놓을 때의 스타일 적용.
+:focus = 웹 요소에 초점이 맞추어 졌을때의 스타일 적용.
+:enabled,:disabled = 요소를 사용 할 수 있을 때와 없을 때의 스타일 지정.
+:checked = 라이오 박스나 체크 박스에서 항목을 선택했을 때와 스타일 지정.
+:nth-child(n),nth-last-child(n) = n번째 자식 요소에 스타일 적용하기.
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.container {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid #E7E7E7;
+}
+
+header {
+	height: 280px;
+	margin: 0;
+	background-image: url('../images/header-bg.png');
+	background-position: left top;
+}
+
+.navi {
+	background: #031a44;
+	width: 960px;
+	height: 60px;
+}
+
+.navi ul {
+	list-style: none;
+	height: 40px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.navi ul li {
+	float: left;
+	display: inline;
+}
+
+.navi a:link, .navi a:visited {
+	padding: 10px 5px 5px 35px;
+	display: block;
+	color: #fff;
+	width: 150px;
+	text-decoration: none;
+}
+
+.navi a:hover, .navi a:focus {
+	text-shadow: 0px 2px 2px #000;
+	color: #FC0;
+}
+.navi a:active {
+	color: blue;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<header></header>
+		<nav class="navi">
+			<ul>
+				<li><a href="#">이용 안내</a></li>
+				<li><a href="#">객실 소개</a></li>
+				<li><a href="#">예약 방법 및 요금</a></li>
+				<li><a href="#">예약 하기</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
+```
+## 가상 클래스 선택자
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+:root {
+	font-family:"궁서";
+}
+body {
+	background-color: #fff;
+}
+
+form fieldset {
+	margin-bottom: 25px;
+}
+
+form legend {
+	font-size: 15px;
+	font-weight: 600;
+}
+
+input:disabled {
+	background: #ddd;
+	border: 1px #ccc solid;
+}
+
+input:checked+span {
+	color: blue;
+}
+</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>사용자 정보</legend>
+			<label>이름<input type="text" disabled></label>
+		</fieldset>
+		<fieldset>
+			<legend>신청 과목</legend>
+			<p>이 달에 신청할 과목을 선택하세요.</p>
+			<label><input type="radio" name="subject" value="speaking"><span>회화</span></label>
+			<label><input type="radio" name="subject" value="grammar"><span>문법</span></label>
+			<label><input type="radio" name="subject" value="white"><span>작문</span></label>
+		</fieldset>
+	</form>
+</body>
+</html>
+```
+
+## 가상 클래스 선택자
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+#container {
+	text-align: center;
+	color: #2b2b2b;
+}
+table {
+	width: 200px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+td {
+	text-align: left;
+	padding: 10px;
+	padding-left: 20px;
+}
+table tr:nth-child(2n+1) {
+	background-color: lightgray;
+	color: black;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<h1>건강에 좋은 건강 식품</h1>
+		<table border="1">
+			<tr>
+				<td>블루베리</td>
+			</tr>
+			<tr>
+				<td>귀리</td>
+			</tr>
+			<tr>
+				<td>토마토</td>
+			</tr>
+			<tr>
+				<td>블루베리</td>
+			</tr>
+			<tr>
+				<td>블루베리</td>
+			</tr>
+			<tr>
+				<td>블루베리</td>
+			</tr>
+			
+		</table>
+	</div>
 </body>
 </html>
 ```
