@@ -1935,3 +1935,209 @@ table tr:nth-child(2n+1) {
 </body>
 </html>
 ```
+# 애니매이션
+
+## transform move
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.origin {
+	width: 200px;
+	height: 134px;
+	border: 1px solid black;
+	float: left;
+	margin: 40px;
+}
+
+.movex:hover { 
+	-webkit-transform: translateX(50px);    }
+	-ms-transform: translateX(50px);         }
+ 	-moz-transform: translateX(50px);        }   // 구형 웹 브라우져 에서 사용하기 위한 표현
+	-o-transform: translateX(50px);         }
+	transform: translateX(50px);            
+}
+
+.movey:hover {
+	
+	transform: translateY(20px);
+}
+
+.movexy:hover {
+	
+	transform: translate(10px, 20px);
+}
+</style>
+</head>
+<body>
+	<div class="origin">
+		<div class="movex">
+			<img src="../images/bus.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="movey">
+			<img src="../images/bus.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="movexy">
+			<img src="../images/bus.jpg">
+		</div>
+	</div>
+</body>
+</html>
+```
+
+## transform scale
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.origin {
+	width: 210px;
+	height: 200px;
+	border: 1px solid black;
+	float: left;
+	margin: 40px;
+}
+.scalex:hover {
+    
+	transform: scaleX(1.2);
+}
+.scaley:hover {
+	
+	transform: scaley(1.5);
+}
+.scalexy:hover {
+
+	transform: scale(0.7);
+}
+</style>
+</head>
+<body>
+	<div class="origin">
+		<div class="scalex">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="scaley">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="scalexy">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+</body>
+</html>
+```
+
+## transform rotate
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.origin {
+	width: 210px;
+	height: 200px;
+	border: 1px solid black;
+	float: left;
+	margin: 40px;
+}
+.rotate1:hover {
+	transform:rotate(10deg);
+	
+}
+.rotate2:hover {
+	transform:rotate(-10deg);
+	
+}
+</style>
+</head>
+<body>
+	<div class="origin">
+		<div class="rotate1">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rotate2">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+
+</body>
+</html>
+
+```
+## transform rotate3D
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>transform</title>
+<style>
+.origin {
+	width: 210px;
+	height: 200px;
+	border: 1px solid black;
+	float: left;
+	margin: 50px;
+	perspective: 200px; // ** 3d로 표현하기 위한 핵심 키워드
+}
+
+.rotatex {
+	transform: rotateX(15deg);
+}
+.rotatey {
+	transform: rotateY(15deg);
+}
+.rotatez {
+	transform: rotatez(15deg);
+}
+.rotatexyz {
+	transform: rotate3D(-4.5,-6.2,-4.7,35deg);
+}
+</style>
+</head>
+<body>
+	<div class="origin">
+		<div class="rotatex">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rotatey">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rotatez">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rotatexyz">
+			<img src="../images/fruit.jpg">
+		</div>
+	</div>
+</body>
+</html>
+```
+
