@@ -2271,3 +2271,121 @@ div {
 </body>
 </html>
 ```
+## keyframes 속성
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+    width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin: 40px;
+}
+
+#box1 {
+    
+	background-color: #4cff00;
+	border: 1px solid black;
+	animation-name: shape;
+	animation-duration: 3s;
+	animation-direction: alternate;  // 역으로 재실행;
+	animation-iteration-count: infinite; // 무한 반복;
+}
+
+#box2 {
+
+	background-color: #8f06b0;
+	border: 1px solid black;
+	animation-name: rotate;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+@keyframes shape{
+    
+    0% {
+       border: 1px solid black; 
+    }
+    
+    100% {
+       border: 1px solid black;
+       border-radius: 50%;
+    }
+    
+}
+
+@keyframes rotate {
+    
+    0% {
+       transform: rotate(0deg);
+       
+    }
+    
+    100% {
+       transform: rotate(45deg);
+    }
+}
+</style>
+</head>
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+</body>
+</html>
+```
+
+## 2개 이상의 애니메이션 동시 실행
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.box {
+	width: 60px;
+	height: 60px;
+	margin: 60px;
+	animation: rotate 1.5s infinite, background 1.5s infinite alternate;
+}
+
+@keyframes rotate {
+    form {
+       transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+    
+    50% {
+       transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    }
+    
+    to {
+       transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    }
+}
+
+@keyframes background {
+    from {
+       background: red;
+    }
+    
+    50% {
+       background: green;
+    }
+    
+    to {
+       background: blue;
+    }
+}
+</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
+```
