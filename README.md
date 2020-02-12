@@ -2140,4 +2140,134 @@ table tr:nth-child(2n+1) {
 </body>
 </html>
 ```
+## transform-origin
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>transform</title>
+<style>
+.origin {
+	width: 160px;
+	height: 240px;
+	float: left;
+	border: 1px solid black;
+	margin: 40px;
+	float: left;
+}
 
+.rose {
+	transform: rotatez(10deg);
+}
+
+.ltop .rose {
+	transform-origin: left top;	// 원본 왼쪽 위 기준;
+}
+
+.rtop .rose {
+	transform-origin: right top;
+}
+
+.lbottom .rose {
+	transform-origin: left bottom;
+}
+
+.rbottom .rose {
+	transform-origin: right bottom;
+}
+</style>
+</head>
+<body>
+	<div class="origin">
+		<div class="ltop">
+			<img src="../images/rose.jpg" class="rose">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rtop">
+			<img src="../images/rose.jpg" class="rose">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="lbottom">
+			<img src="../images/rose.jpg" class="rose">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rbottom">
+			<img src="../images/rose.jpg" class="rose">
+		</div>
+	</div>
+</body>
+</html>
+```
+
+## transition 지연시간
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+h1 {
+	text-align: center;
+}
+
+.tr1 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 1px solid black;
+	transition-property: background-color, transform, width, height;
+	transition-duration: 2s, 3s;
+	transition-timing-function: linear; // 천천히 시작해서 천천히 끝남, ease-in-out 속도 조절;
+	margin: 100px;
+}
+
+.tr1:hover {
+	width: 200px;
+	height: 200px;
+	background-color: #ff6e5f;
+	transform:rotate(180deg);
+}
+</style>
+</head>
+<body>
+	<div class="tr1">
+		<h1>!</h1>
+	</div>
+</body>
+</html>
+```
+
+## transition 복합사용
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div {
+	width: 100px;
+	height: 100px;
+	margin: 100px;
+	background: #0094ff;
+}
+
+.box {
+	transition: 2s ease-in;
+	
+}
+.box:hover {
+    transform: scale(2) perspective(120px) rotateX(180deg);
+}
+</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
+```
